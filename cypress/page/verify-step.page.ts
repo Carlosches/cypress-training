@@ -1,12 +1,12 @@
 class VerifyPage {
-    private confirmationText: string;
+    private confirmationTitle: string;
 
     constructor() {
-      this.confirmationText = "#center_column > div > p > strong";
+      this.confirmationTitle = "#center_column > div > p > strong";
     }
 
-    public verifyPurchase(): void {
-      cy.get(this.confirmationText).should("have.text", "Your order on My Store is complete.");
+    public getConfirmationTitle() {
+      return cy.get(this.confirmationTitle);
     }
 }
 export { VerifyPage };

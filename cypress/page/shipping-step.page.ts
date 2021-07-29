@@ -12,7 +12,7 @@ class ShippingPage {
       cy.get(this.termsOfServiceCheckbox).click();
     }
 
-    public checkoutBtnEvent(): void {
+    public proceedToCheckout(): void {
       cy.get(this.checkoutBtn).click();
     }
 }
