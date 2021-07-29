@@ -5,7 +5,7 @@ class AddressPage {
       this.checkoutBtn = ".cart_navigation button";
     }
 
-    public checkoutBtnEvent(): void {
+    public confirmAddress(): void {
       cy.get(this.checkoutBtn).click();
     }
 }

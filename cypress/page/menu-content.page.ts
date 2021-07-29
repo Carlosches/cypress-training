@@ -3,9 +3,9 @@ class MenuContentPage {
 
     private menuContentPageURL: string;
 
-    constructor() {
+    constructor(pageURL: string) {
       this.tShirtMenu = "#block_top_menu > ul > li:nth-child(3) > a";
-      this.menuContentPageURL = "http://automationpractice.com/";
+      this.menuContentPageURL = pageURL;
     }
 
     public visitMenuContentPage(): void {

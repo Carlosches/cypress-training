@@ -1,9 +1,9 @@
 import {
-  // eslint-disable-next-line max-len
-  MenuContentPage, ProductListPage, ShopingCartPage, LoginPage, AddressPage, ShippingPage, PaymentPage, VerifyPage,
+  MenuContentPage, LoginPage, AddressPage, ShippingPage, PaymentPage, VerifyPage,
+  ProductListPage, ShopingCartPage,
 } from "../page/index";
 
-const menuContentPage = new MenuContentPage();
+const menuContentPage = new MenuContentPage("http://automationpractice.com/");
 const productListPage = new ProductListPage();
 const shopingCartPage = new ShopingCartPage();
 const loginPage = new LoginPage();
@@ -17,16 +17,14 @@ describe("Buy a t-shirt", () => {
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
     productListPage.addTShirtToCart();
-    shopingCartPage.checkoutPopUpEvent();
-    shopingCartPage.checkoutSummaryEvent();
-    loginPage.fillEmailField();
-    loginPage.fillPasswordField();
-    loginPage.submitBtnEvent();
-    addresPage.checkoutBtnEvent();
+    shopingCartPage.addToCart();
+    shopingCartPage.proceedToCheckout();
+    loginPage.login("aperdomobo@gmail.com", "WorkshopProtractor");
+    addresPage.confirmAddress();
     shippingPage.acceptTermsOfService();
-    shippingPage.checkoutBtnEvent();
+    shippingPage.proceedToCheckout();
     paymentPage.selectPayByBankWire();
     paymentPage.confirmOrder();
-    verifyPage.verifyPurchase();
+    verifyPage.getConfirmationTitle().should("have.text", "Your order on My Store is complete.");
   });
 });

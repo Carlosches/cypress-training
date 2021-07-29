@@ -11,15 +11,9 @@ class LoginPage {
       this.submitBtn = "[id=SubmitLogin]";
     }
 
-    public fillEmailField(): void {
-      cy.get(this.emailField).type("aperdomobo@gmail.com");
-    }
-
-    public fillPasswordField(): void {
-      cy.get(this.passwordField).type("WorkshopProtractor");
-    }
-
-    public submitBtnEvent(): void {
+    public login(email: string, password: string): void {
+      cy.get(this.emailField).type(email);
+      cy.get(this.passwordField).type(password);
       cy.get(this.submitBtn).click();
     }
 }

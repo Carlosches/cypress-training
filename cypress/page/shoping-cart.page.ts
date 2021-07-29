@@ -8,11 +8,11 @@ class ShopingCartPage {
       this.checkoutSummaryBtn = ".cart_navigation span";
     }
 
-    public checkoutPopUpEvent(): void {
+    public addToCart(): void {
       cy.get(this.checkoutPopUpBtn).click();
     }
 
-    public checkoutSummaryEvent(): void {
+    public proceedToCheckout(): void {
       cy.get(this.checkoutSummaryBtn).click();
     }
 }
