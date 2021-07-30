@@ -2,7 +2,7 @@ class AddressPage {
     private checkoutBtn: string;
 
     constructor() {
-      this.checkoutBtn = ".cart_navigation button";
+      this.checkoutBtn = "[name=processAddress]";
     }
 
     public confirmAddress(): void {

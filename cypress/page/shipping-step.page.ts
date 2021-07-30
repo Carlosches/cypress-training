@@ -4,7 +4,7 @@ class ShippingPage {
     private checkoutBtn: string;
 
     constructor() {
-      this.termsOfServiceCheckbox = "[id=cgv]";
+      this.termsOfServiceCheckbox = "#cgv";
       this.checkoutBtn = "[name=processCarrier]";
     }
 

@@ -2,7 +2,7 @@ class VerifyPage {
     private confirmationTitle: string;
 
     constructor() {
-      this.confirmationTitle = "#center_column > div > p > strong";
+      this.confirmationTitle = "p.cheque-indent > strong";
     }
 
     public getConfirmationTitle() {

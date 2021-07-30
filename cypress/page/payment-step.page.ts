@@ -4,8 +4,8 @@ class PaymentPage {
     private confirmOrderBtn: string;
 
     constructor() {
-      this.payByBankWire = "p.payment_module > a.bankwire";
-      this.confirmOrderBtn = "p.cart_navigation > button.button.btn.btn-default.button-medium";
+      this.payByBankWire = ".bankwire";
+      this.confirmOrderBtn = ".cart_navigation";
     }
 
     public selectPayByBankWire(): void {
@@ -13,7 +13,7 @@ class PaymentPage {
     }
 
     public confirmOrder(): void {
-      cy.get(this.confirmOrderBtn).click();
+      cy.get(this.confirmOrderBtn).contains("I confirm my order").click();
     }
 }
 export { PaymentPage };
