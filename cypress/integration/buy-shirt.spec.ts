@@ -3,16 +3,26 @@ import {
   ProductListPage, ShopingCartPage,
 } from "../page/index";
 
-const menuContentPage = new MenuContentPage();
-const productListPage = new ProductListPage();
-const shopingCartPage = new ShopingCartPage();
-const loginPage = new LoginPage();
-const addresPage = new AddressPage();
-const shippingPage = new ShippingPage();
-const paymentPage = new PaymentPage();
-const verifyPage = new VerifyPage();
-
 describe("Buy a t-shirt", () => {
+  let menuContentPage: MenuContentPage;
+  let productListPage: ProductListPage;
+  let shopingCartPage: ShopingCartPage;
+  let loginPage: LoginPage;
+  let addresPage: AddressPage;
+  let shippingPage: ShippingPage;
+  let paymentPage: PaymentPage;
+  let verifyPage: VerifyPage;
+
+  before(() => {
+    menuContentPage = new MenuContentPage();
+    productListPage = new ProductListPage();
+    shopingCartPage = new ShopingCartPage();
+    loginPage = new LoginPage();
+    addresPage = new AddressPage();
+    shippingPage = new ShippingPage();
+    paymentPage = new PaymentPage();
+    verifyPage = new VerifyPage();
+  });
   it("then should be bought a t-shirt", () => {
     // Arrange
     menuContentPage.visitMenuContentPage();
