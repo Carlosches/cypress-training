@@ -2,7 +2,7 @@ class ProductListPage {
     private addToCartBtn: string;
 
     constructor() {
-      this.addToCartBtn = "#center_column a.button.ajax_add_to_cart_button.btn.btn-default";
+      this.addToCartBtn = ".button-container > a[data-id-product=1]";
     }
 
     public addTShirtToCart(): void {

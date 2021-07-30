@@ -4,7 +4,7 @@ class ShopingCartPage {
     private checkoutSummaryBtn: string;
 
     constructor() {
-      this.checkoutPopUpBtn = "[style*=\"display: block;\"] .button-container > a";
+      this.checkoutPopUpBtn = ".clearfix a.btn.btn-default.button.button-medium";
       this.checkoutSummaryBtn = ".cart_navigation span";
     }
 

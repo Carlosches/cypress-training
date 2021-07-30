@@ -5,7 +5,7 @@ class PaymentPage {
 
     constructor() {
       this.payByBankWire = "p.payment_module > a.bankwire";
-      this.confirmOrderBtn = "p.cart_navigation > button.button.btn.btn-default.button-medium";
+      this.confirmOrderBtn = "#cart_navigation > button[type=submit]";
     }
 
     public selectPayByBankWire(): void {
